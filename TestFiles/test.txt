@@ -1,0 +1,22 @@
+Select objects: 1 found, 2 total
+
+Select objects:
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+                   Handle = 211
+              Open
+    Constant width    0.0000
+              area   0.0000
+            length   6.9577
+
+          at point  X=  23.0033  Y=  16.1645  Z=   0.0000
+          at point  X=  23.0033  Y=   9.2068  Z=   0.0000
+
+                  HATCH     Layer: "0"
+                            Space: Model space
+                   Color: 247,242,129    Linetype: "BYLAYER"
+                   Handle = 210
+                 Hatch pattern SOLID
+                 Associative
+                 Area      19.2990
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
