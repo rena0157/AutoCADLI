@@ -30,8 +30,7 @@ void autocadli::application::parse_text()
 	// Main loop variables
 	const regex_patterns patterns;
 	object_t object = object_t::null; // starting object type
-	bool object_lock{false};
-
+	
 	// Structs
 	lwpolyline_buffer lw_buf;
 
@@ -42,16 +41,11 @@ void autocadli::application::parse_text()
 
 		// Search for type of object
 		if (std::regex_search(line, patterns.lwpolyline_id))
-		{
 			object = object_t::lwpolyline;
-			object_lock = true;
-		}
 		else if (std::regex_search(line, match_results, patterns.line_id))
-		{
 			object = object_t::line;
-			object_lock = true;
-		}
 
+		// Main parse switch
 		switch (object)
 		{
 		case object_t::null:
