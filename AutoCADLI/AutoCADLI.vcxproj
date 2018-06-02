@@ -135,10 +135,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\core\application.cpp" />
+    <ClCompile Include="src\Entities\Entity.cpp" />
+    <ClCompile Include="src\Entities\lwpolyline.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\application.h" />
+    <ClInclude Include="include\Entities\entity.h" />
+    <ClInclude Include="include\Entities\lwpolyline.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
