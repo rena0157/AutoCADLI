@@ -1,22 +1,44 @@
-Select objects: 1 found, 2 total
 
 Select objects:
-                  LWPOLYLINE  Layer: "0"
+                  LINE      Layer: "0"
                             Space: Model space
-                   Handle = 211
-              Open
-    Constant width    0.0000
-              area   0.0000
-            length   6.9577
-
-          at point  X=  23.0033  Y=  16.1645  Z=   0.0000
-          at point  X=  23.0033  Y=   9.2068  Z=   0.0000
+                   Handle = 2c1
+              from point, X=  49.3741  Y= -17.6778  Z=   0.0000
+                to point, X=  65.9266  Y= -16.9852  Z=   0.0000
+          Length =  16.5669,  Angle in XY Plane =      2
+                  Delta X =  16.5524, Delta Y =    0.6926, Delta Z =   0.0000
 
                   HATCH     Layer: "0"
                             Space: Model space
-                   Color: 247,242,129    Linetype: "BYLAYER"
-                   Handle = 210
+                   Handle = 2a8
                  Hatch pattern SOLID
                  Associative
-                 Area      19.2990
+                 Area      89.7258
                  Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
+
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+                   Handle = 29d
+              Open
+    Constant width    0.0000
+              area   132.4322
+            length   30.4050
+
+          at point  X=  24.4722  Y=  -3.1640  Z=   0.0000
+          at point  X=  25.4710  Y=   6.0903  Z=   0.0000
+          at point  X=  36.0358  Y=   9.2007  Z=   0.0000
+          at point  X=  43.9113  Y=   2.9031  Z=   0.0000
+
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+Press ENTER to continue:
+                   Handle = 29e
+              Open
+    Constant width    0.0000
+              area   156.1278
+            length   33.0629
+
+          at point  X=  51.0954  Y=  -7.6184  Z=   0.0000
+          at point  X=  49.7508  Y=   3.7863  Z=   0.0000
+          at point  X=  58.4331  Y=   9.3543  Z=   0.0000
+          at point  X=  69.3436  Y=   6.5511  Z=   0.0000
