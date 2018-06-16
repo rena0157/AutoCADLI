@@ -1,44 +1,129 @@
+Select objects: 1 found, 12 total
 
 Select objects:
                   LINE      Layer: "0"
                             Space: Model space
-                   Handle = 2c1
-              from point, X=  49.3741  Y= -17.6778  Z=   0.0000
-                to point, X=  65.9266  Y= -16.9852  Z=   0.0000
-          Length =  16.5669,  Angle in XY Plane =      2
-                  Delta X =  16.5524, Delta Y =    0.6926, Delta Z =   0.0000
+                   Color: 6 (magenta)    Linetype: "BYLAYER"
+                   Handle = e12
+              from point, X= 159.9471  Y= 160.1850  Z=   0.0000
+                to point, X= 159.9471  Y=  10.1850  Z=   0.0000
+          Length = 150.0000,  Angle in XY Plane =    270
+                  Delta X =   0.0000, Delta Y = -150.0000, Delta Z =   0.0000
 
                   HATCH     Layer: "0"
                             Space: Model space
-                   Handle = 2a8
+                   Color: 247,242,129    Linetype: "BYLAYER"
+                   Handle = dd7
                  Hatch pattern SOLID
                  Associative
-                 Area      89.7258
+                 Area      4350.0000
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Color: 6 (magenta)    Linetype: "BYLAYER"
+                   Handle = e10
+              from point, X= 212.9471  Y= 154.1850  Z=   0.0000
+                to point, X= 365.3671  Y= 154.1850  Z=   0.0000
+          Length = 152.4200,  Angle in XY Plane =      0
+                  Delta X = 152.4200, Delta Y =    0.0000, Delta Z =   0.0000
+
+                  HATCH     Layer: "0"
+                            Space: Model space
+                   Color: 247,242,129    Linetype: "BYLAYER"
+Press ENTER to continue:
+                   Handle = df6
+                 Hatch pattern SOLID
+                 Not associative
+                 Area      4420.1810
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
+
+                  LINE      Layer: "0"
+                            Space: Model space
+                   Color: 6 (magenta)    Linetype: "BYLAYER"
+                   Handle = e11
+              from point, X= 189.9471  Y= 160.1850  Z=   0.0000
+                to point, X= 189.9471  Y=  10.1850  Z=   0.0000
+          Length = 150.0000,  Angle in XY Plane =    270
+                  Delta X =   0.0000, Delta Y = -150.0000, Delta Z =   0.0000
+
+                  HATCH     Layer: "0"
+                            Space: Model space
+                   Color: 247,242,129    Linetype: "BYLAYER"
+                   Handle = de0
+                 Hatch pattern SOLID
+                 Associative
+                 Area      4350.0000
                  Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
 
                   LWPOLYLINE  Layer: "0"
                             Space: Model space
-                   Handle = 29d
+                   Color: 6 (magenta)    Linetype: "BYLAYER"
+                   Handle = e0f
               Open
     Constant width    0.0000
-              area   132.4322
-            length   30.4050
+              area   6217.9710
+            length   217.1191
 
-          at point  X=  24.4722  Y=  -3.1640  Z=   0.0000
-          at point  X=  25.4710  Y=   6.0903  Z=   0.0000
-          at point  X=  36.0358  Y=   9.2007  Z=   0.0000
-          at point  X=  43.9113  Y=   2.9031  Z=   0.0000
+Press ENTER to continue:
+          at point  X= 235.9471  Y=  10.1850  Z=   0.0000
+          at point  X= 235.9471  Y=  84.1850  Z=   0.0000
+             bulge   -0.4142
+            center  X= 259.9471  Y=  84.1850  Z=   0.0000
+            radius   24.0000
+       start angle       180
+         end angle        90
+          at point  X= 259.9471  Y= 108.1850  Z=   0.0000
+          at point  X= 365.3671  Y= 108.1850  Z=   0.0000
+
+                  HATCH     Layer: "0"
+                            Space: Model space
+                   Color: 247,242,129    Linetype: "BYLAYER"
+                   Handle = dec
+                 Hatch pattern SOLID
+                 Not associative
+                 Area      7157.7120
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
 
                   LWPOLYLINE  Layer: "0"
                             Space: Model space
-Press ENTER to continue:
-                   Handle = 29e
+                   Color: 6 (magenta)    Linetype: "BYLAYER"
+                   Handle = e49
               Open
     Constant width    0.0000
-              area   156.1278
-            length   33.0629
+              area   0.0000
+            length   105.4200
 
-          at point  X=  51.0954  Y=  -7.6184  Z=   0.0000
-          at point  X=  49.7508  Y=   3.7863  Z=   0.0000
-          at point  X=  58.4331  Y=   9.3543  Z=   0.0000
-          at point  X=  69.3436  Y=   6.5511  Z=   0.0000
+          at point  X= 365.3671  Y=  78.1850  Z=   0.0000
+          at point  X= 259.9471  Y=  78.1850  Z=   0.0000
+
+                  HATCH     Layer: "0"
+                            Space: Model space
+Press ENTER to continue:
+                   Color: 247,242,129    Linetype: "BYLAYER"
+                   Handle = e39
+                 Hatch pattern SOLID
+                 Associative
+                 Area      3048.1810
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
+
+                  LWPOLYLINE  Layer: "0"
+                            Space: Model space
+                   Color: 6 (magenta)    Linetype: "BYLAYER"
+                   Handle = e48
+              Open
+    Constant width    0.0000
+              area   0.0000
+            length   105.4200
+
+          at point  X= 259.9471  Y=  32.1850  Z=   0.0000
+          at point  X= 365.3671  Y=  32.1850  Z=   0.0000
+
+                  HATCH     Layer: "0"
+                            Space: Model space
+                   Color: 247,242,129    Linetype: "BYLAYER"
+                   Handle = e47
+                 Hatch pattern SOLID
+                 Associative
+                 Area      3048.1810
+                 Origin    X=   0.0000  Y=   0.0000  Z=   0.0000
