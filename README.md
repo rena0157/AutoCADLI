@@ -1,7 +1,9 @@
 # AutoCAD LI
 
-AutoCAD LI is a tool that I created to extract data from a list command in AutoCAD.
-It will mainly be used for extracting data from polylines and from hatches. This is
-useful for metrics, which are a land development tool. 
+AutoCAD LI is a tool that uses the List command and text files to extract Residential
+block data. 
 
-More to come...
+In your CAD File you will have a series of block (Hatched objects) and frontages (Usually polylines or just lines). 
+When you select these objects in order and enter the List command AutoCAD will 
+present a bunch of information about the objects including their lenth and area. 
+This software will then print to a csv file the correct frontage length as well as the area of the block from the hatch.
