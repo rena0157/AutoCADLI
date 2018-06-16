@@ -9,17 +9,19 @@
 #include <iostream> // cout
 #include <fstream>  // ofstream, infstream
 #include <vector>   // vector
-#include <regex>
-#include <Windows.h>
+#include <regex>    // for regular expressions
+#include <Windows.h> // for all windows API Stuff
 
 
 #ifndef NOMINMAX
 #define NOMINMAX
 #endif
 
+// Application class
 class app
 {
 public:
+	// Main function of the class
 	explicit app();
 
 private:
@@ -28,9 +30,9 @@ private:
 	std::string path_csvfile_;
 
 	// Regex Paterns
-	const std::regex lwpolyline_pat_{ R"((length|perimeter)\s*\d*\.\d\d\d)" };
-	const std::regex line_pat_{ R"(Length\s*=\s*\d*\.\d\d\d)" };
-	const std::regex hatch_pat_{ R"(Area\s*\d*\.\d\d\d)" };
+	const std::regex lwpolyline_pat_{R"((length|perimeter)\s*\d*\.\d\d\d)"};
+	const std::regex line_pat_{R"(Length\s*=\s*\d*\.\d\d\d)"};
+	const std::regex hatch_pat_{R"(Area\s*\d*\.\d\d\d)"};
 
 	// Object vectors
 	std::vector<double> lwpolylines_;
@@ -50,12 +52,13 @@ private:
 	int write_csv();
 
 	// Conversions
-	double m2_ha(const double m2) { return m2 / 10000; }
+	static double m2_ha(const double m2) { return m2 / 10000; }
 };
 
 
 int main()
 {
+	// Run the application
 	app this_app;
 	return 0;
 }
@@ -86,14 +89,14 @@ app::app()
 			lines_.push_back(string_double(line));
 		}
 
-		// lines
+			// lines
 		else if (std::regex_search(line, line_pat_))
 		{
 			const std::string temp = line.substr(0, line.find(','));
 			lines_.push_back(string_double(temp));
 		}
 
-		// hatches
+			// hatches
 		else if (std::regex_search(line, hatch_pat_))
 		{
 			hatches_.push_back(string_double(line));
@@ -101,17 +104,17 @@ app::app()
 	}
 
 	// Total lines length
-	double lines_length{ 0.0 };
+	double lines_length{0.0};
 	for (double num : lines_)
 		lines_length += num;
 
 	// Total hatch area
-	double hatch_area{ 0.0 };
+	double hatch_area{0.0};
 	for (double num : hatches_)
 		hatch_area += num;
 
 	// Total length
-	const double total_length{ lines_length };
+	const double total_length{lines_length};
 
 	//lines
 	std::cout << "Extracted: " << lines_.size() << " lines\n";
@@ -160,7 +163,7 @@ std::string app::save_as()
 	ofn.Flags = OFN_DONTADDTORECENT;
 
 	if (GetSaveFileName(&ofn))
-		return std::string{ filename };
+		return std::string{filename};
 
 	switch (CommDlgExtendedError())
 	{
@@ -196,7 +199,7 @@ std::string app::save_as()
 		break;
 	default: std::cout << "You cancelled.\n";
 	}
-	return std::string{ "" };
+	return std::string{""};
 }
 
 int app::write_csv()
@@ -213,7 +216,7 @@ int app::write_csv()
 
 	file << "Block_Number, Frontage, Area\n";
 
-	for (int rownum{ 0 }; rownum < max_rows; ++rownum)
+	for (int rownum{0}; rownum < static_cast<int>(max_rows); ++rownum)
 		file << rownum + 1 << ", " << lines_[rownum] << ", " << m2_ha(hatches_[rownum]) << "\n";
 
 	file.close();
@@ -238,7 +241,7 @@ std::string app::get_filename()
 	ofn.Flags = OFN_DONTADDTORECENT | OFN_FILEMUSTEXIST;
 
 	if (GetOpenFileName(&ofn))
-		return std::string{ filename };
+		return std::string{filename};
 	// All this stuff below is to tell you exactly how you messed up above. 
 	// Once you've got that fixed, you can often (not always!) reduce it to a 'user cancelled' assumption.
 	switch (CommDlgExtendedError())
@@ -275,7 +278,7 @@ std::string app::get_filename()
 		break;
 	default: std::cout << "You cancelled.\n";
 	}
-	return std::string{ "" };
+	return std::string{""};
 }
 
 // Converts a string to a double
