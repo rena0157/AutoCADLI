@@ -30,9 +30,9 @@ private:
 	std::string path_csvfile_;
 
 	// Regex Paterns
-	const std::regex lwpolyline_pat_{R"((length|perimeter)\s*\d*\.\d\d\d)"};
-	const std::regex line_pat_{R"(Length\s*=\s*\d*\.\d\d\d)"};
-	const std::regex hatch_pat_{R"(Area\s*\d*\.\d\d\d)"};
+	const std::regex lwpolyline_pat_{R"((length|perimeter)\s*\d+\.?(\d\d\d){0,8})"};
+	const std::regex line_pat_{R"(Length\s*=\s*\d+\.?(\d\d\d){0,8})"};
+	const std::regex hatch_pat_{R"(Area\s*\d+\.?(\d\d\d){0,8})"};
 
 	// Object vectors
 	std::vector<double> lwpolylines_;
