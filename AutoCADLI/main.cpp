@@ -83,25 +83,33 @@ app::app()
 
 	for (const auto& line : line_vector)
 	{
-		// lwpolylines
-		if (std::regex_search(line, lwpolyline_pat_))
+		// hatches
+		if (std::regex_search(line, hatch_pat_))
 		{
+			hatches_.push_back(string_double(line));
+			lines_.push_back(0);
+		}
+
+		// lwpolylines
+		else if (std::regex_search(line, lwpolyline_pat_))
+		{
+			if (!lines_.empty())
+				lines_.pop_back();
 			lines_.push_back(string_double(line));
 		}
 
-			// lines
+		// lines
 		else if (std::regex_search(line, line_pat_))
 		{
+			if (!lines_.empty())
+				lines_.pop_back();
 			const std::string temp = line.substr(0, line.find(','));
 			lines_.push_back(string_double(temp));
 		}
-
-			// hatches
-		else if (std::regex_search(line, hatch_pat_))
-		{
-			hatches_.push_back(string_double(line));
-		}
 	}
+
+	// Remove the last excess element from the array
+	lines_.pop_back();
 
 	// Total lines length
 	double lines_length{0.0};
@@ -138,7 +146,8 @@ app::app()
 		std::cout << "CSV File Write Successful: " << path_csvfile_ << "\n";
 		break;
 	case -1:
-		std::cout << "CSV File Write Unsuccessful: Need to select the same number of hatches and lines to create blocks\n";
+		std::cout << "CSV File Write Unsuccessful: There was an error with the number of frontage lines and the number of hatched areas\n";
+		std::cout << "Note: You must select frontage lines and then hatched areas in that order for each block.\n";
 		break;
 	default: ;
 	}
